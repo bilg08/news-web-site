@@ -9,7 +9,7 @@ function SearchBox() {
     function handleSearch(e:FormEvent<HTMLFormElement>) {
         e.preventDefault();
         if (!input) return;
-        router.push(`/search?term${input}`)
+        router.push(`/search?term=${input}`)
 
     }
   return (
@@ -22,9 +22,9 @@ function SearchBox() {
               placeholder='Хайх зүйлээ бичнэ үү'
               type="text"
               className='w-full h-14 rounded-sm placeholder-gray-500 text-gray-500 outline-none bg-transparent dark:text-orange-400 flex-1' />
-          <button
+      <button
               className="text-orange-400 disabled:text-gray-400"
-            disabled={!input}
+        disabled={!input}
             type='submit'>Хайх</button>
     </form>
   );

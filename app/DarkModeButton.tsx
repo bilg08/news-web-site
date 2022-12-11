@@ -11,7 +11,7 @@ function DarkModeButton() {
     },[]);
 
     if (!mounted) {
-        return null
+      return null
     };
     const currentTheme = theme === 'system' ? systemTheme : theme;
 

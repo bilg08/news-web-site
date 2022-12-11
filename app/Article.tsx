@@ -1,3 +1,5 @@
+import ReadMoreButton from "./ReadMoreButton";
+
 type Props = {
     article:Article
 }
@@ -10,8 +12,8 @@ function Article({ article }: Props) {
           src={
             "https://occ-0-395-325.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABer7SeWc6FvkBqWtk61GwL7rshAEVCOARQZVTEJGnLXykYBlO4nbbr6gs7M650BjULuaN6hucXKr5xY2iqPAajrxXd70HawdJeuD.jpg?r=608%22"
           }
-          />
-          
+        />
+
       <div className="flex-1 flex flex-col">
         <div className="flex-1 flex flex-col p-5">
           <h2 className="font-bold font-serif">{article.title}</h2>
@@ -24,6 +26,7 @@ function Article({ article }: Props) {
           </footer>
         </div>
       </div>
+      <ReadMoreButton article={article}/>
     </article>
   );
 }
